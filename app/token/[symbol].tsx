@@ -14,7 +14,7 @@ import {
 } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useColors } from "@/hooks/useColors";
-import { useGetToken } from "@workspace/api-client-react";
+import { useGetToken } from "@/lib/api-client";
 
 function fmtPrice(n: number): string {
   if (!n) return "$0.00";

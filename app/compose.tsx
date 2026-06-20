@@ -23,7 +23,7 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import { Avatar } from "@/components/Avatar";
 import { useAuth } from "@/contexts/AuthContext";
 import { useColors } from "@/hooks/useColors";
-import { useCreatePost, useListTokens } from "@workspace/api-client-react";
+import { useCreatePost, useListTokens } from "@/lib/api-client";
 import { useQueryClient } from "@tanstack/react-query";
 
 /* ─── Upload image to object storage ───────────────────── */

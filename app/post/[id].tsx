@@ -18,7 +18,7 @@ import { Avatar } from "@/components/Avatar";
 import { PostCard } from "@/components/PostCard";
 import { useColors } from "@/hooks/useColors";
 import { useAuth } from "@/contexts/AuthContext";
-import { useGetPost, useListComments, useCreateComment } from "@workspace/api-client-react";
+import { useGetPost, useListComments, useCreateComment } from "@/lib/api-client";
 import { useQueryClient } from "@tanstack/react-query";
 
 export default function PostDetailScreen() {

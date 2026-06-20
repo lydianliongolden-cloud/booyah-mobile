@@ -19,9 +19,9 @@ import Svg, { Path, Defs, LinearGradient as SvgGradient, Stop } from "react-nati
 import { Avatar } from "@/components/Avatar";
 import { PostCard } from "@/components/PostCard";
 import { useColors } from "@/hooks/useColors";
-import { useListPosts, useLikePost, useListStories } from "@workspace/api-client-react";
+import { useListPosts, useLikePost, useListStories } from "@/lib/api-client";
 import { useAuth } from "@/contexts/AuthContext";
-import type { StoryGroup } from "@workspace/api-client-react";
+import type { StoryGroup } from "@/lib/api-client";
 
 /* ─── Crypto chart lines overlay ──────────────────────── */
 function CryptoLines({ width, height }: { width: number; height: number }) {

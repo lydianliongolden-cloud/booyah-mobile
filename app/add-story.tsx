@@ -18,7 +18,7 @@ import {
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useColors } from "@/hooks/useColors";
 import { useAuth } from "@/contexts/AuthContext";
-import { useCreateStory } from "@workspace/api-client-react";
+import { useCreateStory } from "@/lib/api-client";
 import { useQueryClient } from "@tanstack/react-query";
 
 const BG_COLORS = [
