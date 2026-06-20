@@ -13,7 +13,7 @@ import {
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { TokenRow } from "@/components/TokenRow";
 import { useColors } from "@/hooks/useColors";
-import { useListTokens } from "@workspace/api-client-react";
+import { useListTokens } from "@/lib/api-client";
 
 export default function TokensScreen() {
   const colors = useColors();
