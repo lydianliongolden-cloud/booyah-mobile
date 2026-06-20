@@ -15,7 +15,14 @@ jobs:
           token: ${{ secrets.EXPO_TOKEN }}
       - name: Install dependencies
         run: npm install
-      - name: Build iOS
+      - name: Write iOS credentials
+        run: |
+          echo "${{ secrets.IOS_PROVISIONING_PROFILE }}" | base64 --decode > profile.mobileprovision
+          node -e "const fs=require('fs');fs.writeFileSync('credentials.json',JSON.stringify({ios:{distributionCertificate:{certP12:process.env.CERT_P12,certPassword:process.env.CERT_PASS},provisioningProfilePath:'./profile.mobileprovision'}},null,2));console.log('credentials.json written');"
+        env:
+          CERT_P12: ${{ secrets.IOS_DIST_CERT_P12 }}
+          CERT_PASS: ${{ secrets.IOS_DIST_CERT_PASSWORD }}
+      - name: Build iOS (EAS cloud)
         run: eas build --platform ios --profile production --non-interactive
         env:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
