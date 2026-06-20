@@ -34,7 +34,8 @@
       },
       "env": {
         "EXPO_PUBLIC_DOMAIN": "booyah.bio"
-      }
+      },
+      "credentialsSource": "local"
     }
   },
   "submit": {
