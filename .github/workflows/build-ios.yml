@@ -6,24 +6,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-      - uses: pnpm/action-setup@v4
-        with:
-          version: 10
-      
       - uses: expo/expo-github-action@v8
         with:
           eas-version: latest
           token: ${{ secrets.EXPO_TOKEN }}
       - name: Build iOS
-        working-directory: artifacts/booyah-mobile
         run: eas build --platform ios --profile production --non-interactive
         env:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
       - name: Submit to App Store
-        working-directory: artifacts/booyah-mobile
         run: eas submit --platform ios --profile production --non-interactive --latest
         env:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
