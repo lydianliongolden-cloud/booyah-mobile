@@ -1,0 +1,27 @@
+kind = "mobile"
+previewPath = "/booyah-mobile/"
+title = "BooYah! Mobile"
+version = "1.0.0"
+id = "artifacts/booyah-mobile"
+router = "expo-domain"
+
+[[integratedSkills]]
+name = "expo"
+version = "1.0.0"
+
+[[services]]
+ensurePreviewReachable = "/status"
+name = "expo"
+paths = [ "/booyah-mobile/" ]
+localPort = 18558
+
+[services.development]
+run = "pnpm --filter @workspace/booyah-mobile run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/booyah-mobile", "run", "build" ]
+run = [ "pnpm", "--filter", "@workspace/booyah-mobile", "run", "serve" ]
+
+[services.env]
+PORT = "18558"
+BASE_PATH = "/booyah-mobile/"
