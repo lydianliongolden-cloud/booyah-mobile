@@ -1,5 +1,5 @@
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { setAuthTokenGetter, setBaseUrl } from "@workspace/api-client-react";
+import { setAuthTokenGetter, setBaseUrl } from "@/lib/api-client";
 import React, { createContext, useCallback, useContext, useEffect, useState } from "react";
 
 setBaseUrl(`https://${process.env.EXPO_PUBLIC_DOMAIN}`);
