@@ -1,3 +1,10 @@
 const { getDefaultConfig } = require("expo/metro-config");
+const path = require("path");
 
-module.exports = getDefaultConfig(__dirname);
+const config = getDefaultConfig(__dirname);
+
+config.resolver.extraNodeModules = {
+  "@workspace/api-client-react": path.resolve(__dirname, "lib/api-client-react"),
+};
+
+module.exports = config;
