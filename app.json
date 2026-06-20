@@ -15,7 +15,7 @@
     },
     "ios": {
       "supportsTablet": false,
-      "bundleIdentifier": "com.booyah.app",
+      "bundleIdentifier": "bio.booyah.app",
       "buildNumber": "1",
       "appleTeamId": "799C33V7Z8",
       "infoPlist": {
