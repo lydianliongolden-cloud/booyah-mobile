@@ -29,7 +29,7 @@
     },
     "production": {
       "autoIncrement": true,
-      "resourceClass": "m-medium",
+      "resourceClass": "medium",
       "android": {
         "buildType": "app-bundle"
       },
