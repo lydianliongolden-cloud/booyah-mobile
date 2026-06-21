@@ -37,7 +37,8 @@
         "resourceClass": "medium"
       },
       "env": {
-        "EXPO_PUBLIC_DOMAIN": "booyah.bio"
+        "EXPO_PUBLIC_DOMAIN": "booyah.bio",
+        "BUILD_CACHE_KEY": "v2"
       },
       "credentialsSource": "local"
     }
