@@ -29,9 +29,12 @@
     },
     "production": {
       "autoIncrement": true,
-      "resourceClass": "medium",
+      "ios": {
+        "resourceClass": "medium"
+      },
       "android": {
-        "buildType": "app-bundle"
+        "buildType": "app-bundle",
+        "resourceClass": "medium"
       },
       "env": {
         "EXPO_PUBLIC_DOMAIN": "booyah.bio"
